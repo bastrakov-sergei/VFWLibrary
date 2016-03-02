@@ -1,0 +1,784 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6AEB9EE8-E96D-4FED-9A09-C0A6DEEA401E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>VFWEditor</RootNamespace>
+    <AssemblyName>VFWEditor</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;UNITY_EDITOR</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;UNITY_EDITOR</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UnityEditor">
+      <HintPath>..\..\..\..\Program Files\Unity_5.3.1f1\Editor\Data\Managed\UnityEditor.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine">
+      <HintPath>..\..\..\..\Program Files\Unity_5.3.1f1\Editor\Data\Managed\UnityEngine.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\VFWSources\Assets\Plugins\Editor\Vexe\Drawers\API\Base\AttributeDrawer.cs">
+      <Link>Vexe\Drawers\API\Base\AttributeDrawer.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Editor\Vexe\Drawers\API\Base\BaseDrawer.cs">
+      <Link>Vexe\Drawers\API\Base\BaseDrawer.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Editor\Vexe\Drawers\API\Base\CompositeDrawer.cs">
+      <Link>Vexe\Drawers\API\Base\CompositeDrawer.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Editor\Vexe\Drawers\API\Base\ObjectDrawer.cs">
+      <Link>Vexe\Drawers\API\Base\ObjectDrawer.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Editor\Vexe\Drawers\API\Core\BasicDrawers.cs">
+      <Link>Vexe\Drawers\API\Core\BasicDrawers.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Editor\Vexe\Drawers\API\Core\DelegateDrawer.cs">
+      <Link>Vexe\Drawers\API\Core\DelegateDrawer.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Editor\Vexe\Drawers\API\Core\DictionaryDrawer.cs">
+      <Link>Vexe\Drawers\API\Core\DictionaryDrawer.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Editor\Vexe\Drawers\API\Core\MethodDrawer.cs">
+      <Link>Vexe\Drawers\API\Core\MethodDrawer.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Editor\Vexe\Drawers\API\Core\NullableDrawer.cs">
+      <Link>Vexe\Drawers\API\Core\NullableDrawer.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Editor\Vexe\Drawers\API\Core\RecursiveDrawer.cs">
+      <Link>Vexe\Drawers\API\Core\RecursiveDrawer.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Editor\Vexe\Drawers\API\Core\SequenceDrawer.cs">
+      <Link>Vexe\Drawers\API\Core\SequenceDrawer.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Editor\Vexe\Drawers\API\MemberDrawersHandler.cs">
+      <Link>Vexe\Drawers\API\MemberDrawersHandler.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Editor\Vexe\Drawers\API\TypeDrawerMapper.cs">
+      <Link>Vexe\Drawers\API\TypeDrawerMapper.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Editor\Vexe\Drawers\User\Constraints\ConstrainValueDrawers.cs">
+      <Link>Vexe\Drawers\User\Constraints\ConstrainValueDrawers.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Editor\Vexe\Drawers\User\Constraints\RegexDrawer.cs">
+      <Link>Vexe\Drawers\User\Constraints\RegexDrawer.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Editor\Vexe\Drawers\User\Decorates\CommentDrawer.cs">
+      <Link>Vexe\Drawers\User\Decorates\CommentDrawer.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Editor\Vexe\Drawers\User\Decorates\WhiteSpaceDrawer.cs">
+      <Link>Vexe\Drawers\User\Decorates\WhiteSpaceDrawer.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Editor\Vexe\Drawers\User\Enums\EnumMaskDrawer.cs">
+      <Link>Vexe\Drawers\User\Enums\EnumMaskDrawer.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Editor\Vexe\Drawers\User\Filters\FilterDrawers.cs">
+      <Link>Vexe\Drawers\User\Filters\FilterDrawers.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Editor\Vexe\Drawers\User\Others\AssignableDrawer.cs">
+      <Link>Vexe\Drawers\User\Others\AssignableDrawer.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Editor\Vexe\Drawers\User\Others\ButtonDrawer.cs">
+      <Link>Vexe\Drawers\User\Others\ButtonDrawer.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Editor\Vexe\Drawers\User\Others\DraggableDrawer.cs">
+      <Link>Vexe\Drawers\User\Others\DraggableDrawer.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Editor\Vexe\Drawers\User\Others\InlineDrawer.cs">
+      <Link>Vexe\Drawers\User\Others\InlineDrawer.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Editor\Vexe\Drawers\User\Others\OnChangedDrawer.cs">
+      <Link>Vexe\Drawers\User\Others\OnChangedDrawer.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Editor\Vexe\Drawers\User\Others\ParagraphDrawer.cs">
+      <Link>Vexe\Drawers\User\Others\ParagraphDrawer.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Editor\Vexe\Drawers\User\Others\PathDrawer.cs">
+      <Link>Vexe\Drawers\User\Others\PathDrawer.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Editor\Vexe\Drawers\User\Others\ResourcePathDrawer.cs">
+      <Link>Vexe\Drawers\User\Others\ResourcePathDrawer.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Editor\Vexe\Drawers\User\Others\ShowTypeDrawer.cs">
+      <Link>Vexe\Drawers\User\Others\ShowTypeDrawer.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Editor\Vexe\Drawers\User\Others\SliderDrawers.cs">
+      <Link>Vexe\Drawers\User\Others\SliderDrawers.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Editor\Vexe\Drawers\User\Popups\AnimVarDrawer.cs">
+      <Link>Vexe\Drawers\User\Popups\AnimVarDrawer.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Editor\Vexe\Drawers\User\Popups\InputAxisDrawer.cs">
+      <Link>Vexe\Drawers\User\Popups\InputAxisDrawer.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Editor\Vexe\Drawers\User\Popups\PopupDrawer.cs">
+      <Link>Vexe\Drawers\User\Popups\PopupDrawer.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Editor\Vexe\Drawers\User\Popups\TagsDrawer.cs">
+      <Link>Vexe\Drawers\User\Popups\TagsDrawer.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Editor\Vexe\Drawers\User\Randoms\RandomsDrawers.cs">
+      <Link>Vexe\Drawers\User\Randoms\RandomsDrawers.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Editor\Vexe\Drawers\User\Requirements\RequirementDrawers.cs">
+      <Link>Vexe\Drawers\User\Requirements\RequirementDrawers.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Editor\Vexe\Drawers\User\Selections\SelectEnumDrawer.cs">
+      <Link>Vexe\Drawers\User\Selections\SelectEnumDrawer.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Editor\Vexe\Drawers\User\Selections\SelectObjDrawer.cs">
+      <Link>Vexe\Drawers\User\Selections\SelectObjDrawer.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Editor\Vexe\Drawers\User\Selections\SelectSceneDrawer.cs">
+      <Link>Vexe\Drawers\User\Selections\SelectSceneDrawer.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Editor\Vexe\Drawers\User\Vectors\BetterVectorDrawer.cs">
+      <Link>Vexe\Drawers\User\Vectors\BetterVectorDrawer.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Editor\Vexe\Editors\BaseBehaviourEditor.cs">
+      <Link>Vexe\Editors\BaseBehaviourEditor.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Editor\Vexe\Editors\BaseEditor.cs">
+      <Link>Vexe\Editors\BaseEditor.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Editor\Vexe\Editors\BaseScriptableObjectEditor.cs">
+      <Link>Vexe\Editors\BaseScriptableObjectEditor.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Editor\Vexe\Editors\Internal\CategoryDefinitionResolver.cs">
+      <Link>Vexe\Editors\Internal\CategoryDefinitionResolver.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Editor\Vexe\Editors\Internal\ConditionalVisibility.cs">
+      <Link>Vexe\Editors\Internal\ConditionalVisibility.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Editor\Vexe\Editors\Internal\MembersCategory.cs">
+      <Link>Vexe\Editors\Internal\MembersCategory.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Editor\Vexe\GUIs\BaseGUI\BaseGUI.cs">
+      <Link>Vexe\GUIs\BaseGUI\BaseGUI.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Editor\Vexe\GUIs\BaseGUI\Controls\Bounds.cs">
+      <Link>Vexe\GUIs\BaseGUI\Controls\Bounds.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Editor\Vexe\GUIs\BaseGUI\Controls\Boxes.cs">
+      <Link>Vexe\GUIs\BaseGUI\Controls\Boxes.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Editor\Vexe\GUIs\BaseGUI\Controls\Buttons.cs">
+      <Link>Vexe\GUIs\BaseGUI\Controls\Buttons.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Editor\Vexe\GUIs\BaseGUI\Controls\Colors.cs">
+      <Link>Vexe\GUIs\BaseGUI\Controls\Colors.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Editor\Vexe\GUIs\BaseGUI\Controls\Curves.cs">
+      <Link>Vexe\GUIs\BaseGUI\Controls\Curves.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Editor\Vexe\GUIs\BaseGUI\Controls\Doubles.cs">
+      <Link>Vexe\GUIs\BaseGUI\Controls\Doubles.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Editor\Vexe\GUIs\BaseGUI\Controls\DragDrop.cs">
+      <Link>Vexe\GUIs\BaseGUI\Controls\DragDrop.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Editor\Vexe\GUIs\BaseGUI\Controls\Enums.cs">
+      <Link>Vexe\GUIs\BaseGUI\Controls\Enums.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Editor\Vexe\GUIs\BaseGUI\Controls\Floats.cs">
+      <Link>Vexe\GUIs\BaseGUI\Controls\Floats.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Editor\Vexe\GUIs\BaseGUI\Controls\Foldouts.cs">
+      <Link>Vexe\GUIs\BaseGUI\Controls\Foldouts.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Editor\Vexe\GUIs\BaseGUI\Controls\Gradients.cs">
+      <Link>Vexe\GUIs\BaseGUI\Controls\Gradients.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Editor\Vexe\GUIs\BaseGUI\Controls\Ints.cs">
+      <Link>Vexe\GUIs\BaseGUI\Controls\Ints.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Editor\Vexe\GUIs\BaseGUI\Controls\Labels.cs">
+      <Link>Vexe\GUIs\BaseGUI\Controls\Labels.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Editor\Vexe\GUIs\BaseGUI\Controls\Layers.cs">
+      <Link>Vexe\GUIs\BaseGUI\Controls\Layers.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Editor\Vexe\GUIs\BaseGUI\Controls\Longs.cs">
+      <Link>Vexe\GUIs\BaseGUI\Controls\Longs.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Editor\Vexe\GUIs\BaseGUI\Controls\Masks.cs">
+      <Link>Vexe\GUIs\BaseGUI\Controls\Masks.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Editor\Vexe\GUIs\BaseGUI\Controls\Members.cs">
+      <Link>Vexe\GUIs\BaseGUI\Controls\Members.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Editor\Vexe\GUIs\BaseGUI\Controls\Objects.cs">
+      <Link>Vexe\GUIs\BaseGUI\Controls\Objects.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Editor\Vexe\GUIs\BaseGUI\Controls\Popups.cs">
+      <Link>Vexe\GUIs\BaseGUI\Controls\Popups.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Editor\Vexe\GUIs\BaseGUI\Controls\Quaternions.cs">
+      <Link>Vexe\GUIs\BaseGUI\Controls\Quaternions.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Editor\Vexe\GUIs\BaseGUI\Controls\Rects.cs">
+      <Link>Vexe\GUIs\BaseGUI\Controls\Rects.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Editor\Vexe\GUIs\BaseGUI\Controls\ScrollViews.cs">
+      <Link>Vexe\GUIs\BaseGUI\Controls\ScrollViews.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Editor\Vexe\GUIs\BaseGUI\Controls\Sliders.cs">
+      <Link>Vexe\GUIs\BaseGUI\Controls\Sliders.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Editor\Vexe\GUIs\BaseGUI\Controls\Spaces.cs">
+      <Link>Vexe\GUIs\BaseGUI\Controls\Spaces.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Editor\Vexe\GUIs\BaseGUI\Controls\Texts.cs">
+      <Link>Vexe\GUIs\BaseGUI\Controls\Texts.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Editor\Vexe\GUIs\BaseGUI\Controls\Toggles.cs">
+      <Link>Vexe\GUIs\BaseGUI\Controls\Toggles.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Editor\Vexe\GUIs\BaseGUI\Controls\Vectors.cs">
+      <Link>Vexe\GUIs\BaseGUI\Controls\Vectors.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Editor\Vexe\GUIs\BaseGUI\GUIStyles.cs">
+      <Link>Vexe\GUIs\BaseGUI\GUIStyles.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Editor\Vexe\GUIs\BaseGUI\Layout.cs">
+      <Link>Vexe\GUIs\BaseGUI\Layout.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Editor\Vexe\GUIs\RabbitGUI\Blocks\GUIBlock.cs">
+      <Link>Vexe\GUIs\RabbitGUI\Blocks\GUIBlock.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Editor\Vexe\GUIs\RabbitGUI\Blocks\HorizontalBlock.cs">
+      <Link>Vexe\GUIs\RabbitGUI\Blocks\HorizontalBlock.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Editor\Vexe\GUIs\RabbitGUI\Blocks\Others.cs">
+      <Link>Vexe\GUIs\RabbitGUI\Blocks\Others.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Editor\Vexe\GUIs\RabbitGUI\Blocks\VerticalBlock.cs">
+      <Link>Vexe\GUIs\RabbitGUI\Blocks\VerticalBlock.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Editor\Vexe\GUIs\RabbitGUI\GUIControl.cs">
+      <Link>Vexe\GUIs\RabbitGUI\GUIControl.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Editor\Vexe\GUIs\RabbitGUI\RabbitGUI.cs">
+      <Link>Vexe\GUIs\RabbitGUI\RabbitGUI.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Editor\Vexe\GUIs\TurtleGUI.cs">
+      <Link>Vexe\GUIs\TurtleGUI.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Editor\Vexe\Library\Extensions\EventExtensions.cs">
+      <Link>Vexe\Library\Extensions\EventExtensions.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Editor\Vexe\Library\Helpers\DirectoryHelper.cs">
+      <Link>Vexe\Library\Helpers\DirectoryHelper.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Editor\Vexe\Library\Helpers\EditorHelper.cs">
+      <Link>Vexe\Library\Helpers\EditorHelper.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Editor\Vexe\Library\Helpers\GUIHelper.cs">
+      <Link>Vexe\Library\Helpers\GUIHelper.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Editor\Vexe\Library\Helpers\PrefabHelper.cs">
+      <Link>Vexe\Library\Helpers\PrefabHelper.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Editor\Vexe\Types\BetterPrefsEditor.cs">
+      <Link>Vexe\Types\BetterPrefsEditor.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Editor\Vexe\Types\BetterUndo\BetterUndo.cs">
+      <Link>Vexe\Types\BetterUndo\BetterUndo.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Editor\Vexe\Types\BetterUndo\Operations\BasicOp.cs">
+      <Link>Vexe\Types\BetterUndo\Operations\BasicOp.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Editor\Vexe\Types\BetterUndo\Operations\IUndoOp.cs">
+      <Link>Vexe\Types\BetterUndo\Operations\IUndoOp.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Editor\Vexe\Types\BetterUndo\Operations\ListOps.cs">
+      <Link>Vexe\Types\BetterUndo\Operations\ListOps.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Editor\Vexe\Types\BetterUndo\Operations\SelectionOp.cs">
+      <Link>Vexe\Types\BetterUndo\Operations\SelectionOp.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Editor\Vexe\Types\BetterUndo\Operations\SetVarOp.cs">
+      <Link>Vexe\Types\BetterUndo\Operations\SetVarOp.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Editor\Vexe\Types\EditorMember.cs">
+      <Link>Vexe\Types\EditorMember.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Editor\Vexe\Types\Foldouts.cs">
+      <Link>Vexe\Types\Foldouts.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Editor\Vexe\Types\SelectionMemorizer.cs">
+      <Link>Vexe\Types\SelectionMemorizer.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Editor\Vexe\Types\VFWSettings.cs">
+      <Link>Vexe\Types\VFWSettings.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Editor\Vexe\Visibility\VisibilityAttributes.cs">
+      <Link>Vexe\Visibility\VisibilityAttributes.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Editor\Vexe\Visibility\VisibilityLogic.cs">
+      <Link>Vexe\Visibility\VisibilityLogic.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Editor\Vexe\Windows\BetterWindow.cs">
+      <Link>Vexe\Windows\BetterWindow.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Editor\Vexe\Windows\SelectionWindow.cs">
+      <Link>Vexe\Windows\SelectionWindow.cs</Link>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\VFWSources\Assets\Plugins\Editor\Vexe\Drawers.meta">
+      <Link>Vexe\Drawers.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Editor\Vexe\Drawers\API.meta">
+      <Link>Vexe\Drawers\API.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Editor\Vexe\Drawers\API\Base.meta">
+      <Link>Vexe\Drawers\API\Base.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Editor\Vexe\Drawers\API\Base\AttributeDrawer.cs.meta">
+      <Link>Vexe\Drawers\API\Base\AttributeDrawer.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Editor\Vexe\Drawers\API\Base\BaseDrawer.cs.meta">
+      <Link>Vexe\Drawers\API\Base\BaseDrawer.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Editor\Vexe\Drawers\API\Base\CompositeDrawer.cs.meta">
+      <Link>Vexe\Drawers\API\Base\CompositeDrawer.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Editor\Vexe\Drawers\API\Base\ObjectDrawer.cs.meta">
+      <Link>Vexe\Drawers\API\Base\ObjectDrawer.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Editor\Vexe\Drawers\API\Core.meta">
+      <Link>Vexe\Drawers\API\Core.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Editor\Vexe\Drawers\API\Core\BasicDrawers.cs.meta">
+      <Link>Vexe\Drawers\API\Core\BasicDrawers.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Editor\Vexe\Drawers\API\Core\DelegateDrawer.cs.meta">
+      <Link>Vexe\Drawers\API\Core\DelegateDrawer.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Editor\Vexe\Drawers\API\Core\DictionaryDrawer.cs.meta">
+      <Link>Vexe\Drawers\API\Core\DictionaryDrawer.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Editor\Vexe\Drawers\API\Core\MethodDrawer.cs.meta">
+      <Link>Vexe\Drawers\API\Core\MethodDrawer.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Editor\Vexe\Drawers\API\Core\NullableDrawer.cs.meta">
+      <Link>Vexe\Drawers\API\Core\NullableDrawer.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Editor\Vexe\Drawers\API\Core\RecursiveDrawer.cs.meta">
+      <Link>Vexe\Drawers\API\Core\RecursiveDrawer.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Editor\Vexe\Drawers\API\Core\SequenceDrawer.cs.meta">
+      <Link>Vexe\Drawers\API\Core\SequenceDrawer.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Editor\Vexe\Drawers\API\MemberDrawersHandler.cs.meta">
+      <Link>Vexe\Drawers\API\MemberDrawersHandler.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Editor\Vexe\Drawers\API\TypeDrawerMapper.cs.meta">
+      <Link>Vexe\Drawers\API\TypeDrawerMapper.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Editor\Vexe\Drawers\User.meta">
+      <Link>Vexe\Drawers\User.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Editor\Vexe\Drawers\User\Constraints.meta">
+      <Link>Vexe\Drawers\User\Constraints.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Editor\Vexe\Drawers\User\Constraints\ConstrainValueDrawers.cs.meta">
+      <Link>Vexe\Drawers\User\Constraints\ConstrainValueDrawers.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Editor\Vexe\Drawers\User\Constraints\RegexDrawer.cs.meta">
+      <Link>Vexe\Drawers\User\Constraints\RegexDrawer.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Editor\Vexe\Drawers\User\Decorates.meta">
+      <Link>Vexe\Drawers\User\Decorates.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Editor\Vexe\Drawers\User\Decorates\CommentDrawer.cs.meta">
+      <Link>Vexe\Drawers\User\Decorates\CommentDrawer.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Editor\Vexe\Drawers\User\Decorates\WhiteSpaceDrawer.cs.meta">
+      <Link>Vexe\Drawers\User\Decorates\WhiteSpaceDrawer.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Editor\Vexe\Drawers\User\Enums.meta">
+      <Link>Vexe\Drawers\User\Enums.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Editor\Vexe\Drawers\User\Enums\EnumMaskDrawer.cs.meta">
+      <Link>Vexe\Drawers\User\Enums\EnumMaskDrawer.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Editor\Vexe\Drawers\User\Filters.meta">
+      <Link>Vexe\Drawers\User\Filters.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Editor\Vexe\Drawers\User\Filters\FilterDrawers.cs.meta">
+      <Link>Vexe\Drawers\User\Filters\FilterDrawers.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Editor\Vexe\Drawers\User\Others.meta">
+      <Link>Vexe\Drawers\User\Others.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Editor\Vexe\Drawers\User\Others\AssignableDrawer.cs.meta">
+      <Link>Vexe\Drawers\User\Others\AssignableDrawer.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Editor\Vexe\Drawers\User\Others\ButtonDrawer.cs.meta">
+      <Link>Vexe\Drawers\User\Others\ButtonDrawer.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Editor\Vexe\Drawers\User\Others\DraggableDrawer.cs.meta">
+      <Link>Vexe\Drawers\User\Others\DraggableDrawer.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Editor\Vexe\Drawers\User\Others\InlineDrawer.cs.meta">
+      <Link>Vexe\Drawers\User\Others\InlineDrawer.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Editor\Vexe\Drawers\User\Others\OnChangedDrawer.cs.meta">
+      <Link>Vexe\Drawers\User\Others\OnChangedDrawer.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Editor\Vexe\Drawers\User\Others\ParagraphDrawer.cs.meta">
+      <Link>Vexe\Drawers\User\Others\ParagraphDrawer.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Editor\Vexe\Drawers\User\Others\PathDrawer.cs.meta">
+      <Link>Vexe\Drawers\User\Others\PathDrawer.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Editor\Vexe\Drawers\User\Others\ResourcePathDrawer.cs.meta">
+      <Link>Vexe\Drawers\User\Others\ResourcePathDrawer.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Editor\Vexe\Drawers\User\Others\ShowTypeDrawer.cs.meta">
+      <Link>Vexe\Drawers\User\Others\ShowTypeDrawer.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Editor\Vexe\Drawers\User\Others\SliderDrawers.cs.meta">
+      <Link>Vexe\Drawers\User\Others\SliderDrawers.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Editor\Vexe\Drawers\User\Popups.meta">
+      <Link>Vexe\Drawers\User\Popups.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Editor\Vexe\Drawers\User\Popups\AnimVarDrawer.cs.meta">
+      <Link>Vexe\Drawers\User\Popups\AnimVarDrawer.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Editor\Vexe\Drawers\User\Popups\InputAxisDrawer.cs.meta">
+      <Link>Vexe\Drawers\User\Popups\InputAxisDrawer.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Editor\Vexe\Drawers\User\Popups\PopupDrawer.cs.meta">
+      <Link>Vexe\Drawers\User\Popups\PopupDrawer.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Editor\Vexe\Drawers\User\Popups\TagsDrawer.cs.meta">
+      <Link>Vexe\Drawers\User\Popups\TagsDrawer.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Editor\Vexe\Drawers\User\Randoms.meta">
+      <Link>Vexe\Drawers\User\Randoms.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Editor\Vexe\Drawers\User\Randoms\RandomsDrawers.cs.meta">
+      <Link>Vexe\Drawers\User\Randoms\RandomsDrawers.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Editor\Vexe\Drawers\User\Requirements.meta">
+      <Link>Vexe\Drawers\User\Requirements.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Editor\Vexe\Drawers\User\Requirements\RequirementDrawers.cs.meta">
+      <Link>Vexe\Drawers\User\Requirements\RequirementDrawers.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Editor\Vexe\Drawers\User\Selections.meta">
+      <Link>Vexe\Drawers\User\Selections.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Editor\Vexe\Drawers\User\Selections\SelectEnumDrawer.cs.meta">
+      <Link>Vexe\Drawers\User\Selections\SelectEnumDrawer.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Editor\Vexe\Drawers\User\Selections\SelectObjDrawer.cs.meta">
+      <Link>Vexe\Drawers\User\Selections\SelectObjDrawer.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Editor\Vexe\Drawers\User\Selections\SelectSceneDrawer.cs.meta">
+      <Link>Vexe\Drawers\User\Selections\SelectSceneDrawer.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Editor\Vexe\Drawers\User\Vectors.meta">
+      <Link>Vexe\Drawers\User\Vectors.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Editor\Vexe\Drawers\User\Vectors\BetterVectorDrawer.cs.meta">
+      <Link>Vexe\Drawers\User\Vectors\BetterVectorDrawer.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Editor\Vexe\Editors.meta">
+      <Link>Vexe\Editors.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Editor\Vexe\Editors\BaseBehaviourEditor.cs.meta">
+      <Link>Vexe\Editors\BaseBehaviourEditor.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Editor\Vexe\Editors\BaseEditor.cs.meta">
+      <Link>Vexe\Editors\BaseEditor.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Editor\Vexe\Editors\BaseScriptableObjectEditor.cs.meta">
+      <Link>Vexe\Editors\BaseScriptableObjectEditor.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Editor\Vexe\Editors\Internal.meta">
+      <Link>Vexe\Editors\Internal.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Editor\Vexe\Editors\Internal\CategoryDefinitionResolver.cs.meta">
+      <Link>Vexe\Editors\Internal\CategoryDefinitionResolver.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Editor\Vexe\Editors\Internal\ConditionalVisibility.cs.meta">
+      <Link>Vexe\Editors\Internal\ConditionalVisibility.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Editor\Vexe\Editors\Internal\MembersCategory.cs.meta">
+      <Link>Vexe\Editors\Internal\MembersCategory.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Editor\Vexe\GUIs.meta">
+      <Link>Vexe\GUIs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Editor\Vexe\GUIs\BaseGUI.meta">
+      <Link>Vexe\GUIs\BaseGUI.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Editor\Vexe\GUIs\BaseGUI\BaseGUI.cs.meta">
+      <Link>Vexe\GUIs\BaseGUI\BaseGUI.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Editor\Vexe\GUIs\BaseGUI\Controls.meta">
+      <Link>Vexe\GUIs\BaseGUI\Controls.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Editor\Vexe\GUIs\BaseGUI\Controls\Bounds.cs.meta">
+      <Link>Vexe\GUIs\BaseGUI\Controls\Bounds.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Editor\Vexe\GUIs\BaseGUI\Controls\Boxes.cs.meta">
+      <Link>Vexe\GUIs\BaseGUI\Controls\Boxes.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Editor\Vexe\GUIs\BaseGUI\Controls\Buttons.cs.meta">
+      <Link>Vexe\GUIs\BaseGUI\Controls\Buttons.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Editor\Vexe\GUIs\BaseGUI\Controls\Colors.cs.meta">
+      <Link>Vexe\GUIs\BaseGUI\Controls\Colors.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Editor\Vexe\GUIs\BaseGUI\Controls\Curves.cs.meta">
+      <Link>Vexe\GUIs\BaseGUI\Controls\Curves.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Editor\Vexe\GUIs\BaseGUI\Controls\Doubles.cs.meta">
+      <Link>Vexe\GUIs\BaseGUI\Controls\Doubles.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Editor\Vexe\GUIs\BaseGUI\Controls\DragDrop.cs.meta">
+      <Link>Vexe\GUIs\BaseGUI\Controls\DragDrop.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Editor\Vexe\GUIs\BaseGUI\Controls\Enums.cs.meta">
+      <Link>Vexe\GUIs\BaseGUI\Controls\Enums.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Editor\Vexe\GUIs\BaseGUI\Controls\Floats.cs.meta">
+      <Link>Vexe\GUIs\BaseGUI\Controls\Floats.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Editor\Vexe\GUIs\BaseGUI\Controls\Foldouts.cs.meta">
+      <Link>Vexe\GUIs\BaseGUI\Controls\Foldouts.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Editor\Vexe\GUIs\BaseGUI\Controls\Gradients.cs.meta">
+      <Link>Vexe\GUIs\BaseGUI\Controls\Gradients.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Editor\Vexe\GUIs\BaseGUI\Controls\Ints.cs.meta">
+      <Link>Vexe\GUIs\BaseGUI\Controls\Ints.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Editor\Vexe\GUIs\BaseGUI\Controls\Labels.cs.meta">
+      <Link>Vexe\GUIs\BaseGUI\Controls\Labels.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Editor\Vexe\GUIs\BaseGUI\Controls\Layers.cs.meta">
+      <Link>Vexe\GUIs\BaseGUI\Controls\Layers.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Editor\Vexe\GUIs\BaseGUI\Controls\Longs.cs.meta">
+      <Link>Vexe\GUIs\BaseGUI\Controls\Longs.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Editor\Vexe\GUIs\BaseGUI\Controls\Masks.cs.meta">
+      <Link>Vexe\GUIs\BaseGUI\Controls\Masks.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Editor\Vexe\GUIs\BaseGUI\Controls\Members.cs.meta">
+      <Link>Vexe\GUIs\BaseGUI\Controls\Members.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Editor\Vexe\GUIs\BaseGUI\Controls\Objects.cs.meta">
+      <Link>Vexe\GUIs\BaseGUI\Controls\Objects.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Editor\Vexe\GUIs\BaseGUI\Controls\Popups.cs.meta">
+      <Link>Vexe\GUIs\BaseGUI\Controls\Popups.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Editor\Vexe\GUIs\BaseGUI\Controls\Quaternions.cs.meta">
+      <Link>Vexe\GUIs\BaseGUI\Controls\Quaternions.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Editor\Vexe\GUIs\BaseGUI\Controls\Rects.cs.meta">
+      <Link>Vexe\GUIs\BaseGUI\Controls\Rects.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Editor\Vexe\GUIs\BaseGUI\Controls\ScrollViews.cs.meta">
+      <Link>Vexe\GUIs\BaseGUI\Controls\ScrollViews.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Editor\Vexe\GUIs\BaseGUI\Controls\Sliders.cs.meta">
+      <Link>Vexe\GUIs\BaseGUI\Controls\Sliders.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Editor\Vexe\GUIs\BaseGUI\Controls\Spaces.cs.meta">
+      <Link>Vexe\GUIs\BaseGUI\Controls\Spaces.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Editor\Vexe\GUIs\BaseGUI\Controls\Texts.cs.meta">
+      <Link>Vexe\GUIs\BaseGUI\Controls\Texts.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Editor\Vexe\GUIs\BaseGUI\Controls\Toggles.cs.meta">
+      <Link>Vexe\GUIs\BaseGUI\Controls\Toggles.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Editor\Vexe\GUIs\BaseGUI\Controls\Vectors.cs.meta">
+      <Link>Vexe\GUIs\BaseGUI\Controls\Vectors.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Editor\Vexe\GUIs\BaseGUI\GUIStyles.cs.meta">
+      <Link>Vexe\GUIs\BaseGUI\GUIStyles.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Editor\Vexe\GUIs\BaseGUI\Layout.cs.meta">
+      <Link>Vexe\GUIs\BaseGUI\Layout.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Editor\Vexe\GUIs\RabbitGUI.meta">
+      <Link>Vexe\GUIs\RabbitGUI.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Editor\Vexe\GUIs\RabbitGUI\Blocks.meta">
+      <Link>Vexe\GUIs\RabbitGUI\Blocks.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Editor\Vexe\GUIs\RabbitGUI\Blocks\GUIBlock.cs.meta">
+      <Link>Vexe\GUIs\RabbitGUI\Blocks\GUIBlock.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Editor\Vexe\GUIs\RabbitGUI\Blocks\HorizontalBlock.cs.meta">
+      <Link>Vexe\GUIs\RabbitGUI\Blocks\HorizontalBlock.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Editor\Vexe\GUIs\RabbitGUI\Blocks\Others.cs.meta">
+      <Link>Vexe\GUIs\RabbitGUI\Blocks\Others.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Editor\Vexe\GUIs\RabbitGUI\Blocks\VerticalBlock.cs.meta">
+      <Link>Vexe\GUIs\RabbitGUI\Blocks\VerticalBlock.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Editor\Vexe\GUIs\RabbitGUI\GUIControl.cs.meta">
+      <Link>Vexe\GUIs\RabbitGUI\GUIControl.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Editor\Vexe\GUIs\RabbitGUI\RabbitGUI.cs.meta">
+      <Link>Vexe\GUIs\RabbitGUI\RabbitGUI.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Editor\Vexe\GUIs\TurtleGUI.cs.meta">
+      <Link>Vexe\GUIs\TurtleGUI.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Editor\Vexe\Library.meta">
+      <Link>Vexe\Library.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Editor\Vexe\Library\Extensions.meta">
+      <Link>Vexe\Library\Extensions.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Editor\Vexe\Library\Extensions\EventExtensions.cs.meta">
+      <Link>Vexe\Library\Extensions\EventExtensions.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Editor\Vexe\Library\Helpers.meta">
+      <Link>Vexe\Library\Helpers.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Editor\Vexe\Library\Helpers\DirectoryHelper.cs.meta">
+      <Link>Vexe\Library\Helpers\DirectoryHelper.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Editor\Vexe\Library\Helpers\EditorHelper.cs.meta">
+      <Link>Vexe\Library\Helpers\EditorHelper.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Editor\Vexe\Library\Helpers\GUIHelper.cs.meta">
+      <Link>Vexe\Library\Helpers\GUIHelper.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Editor\Vexe\Library\Helpers\PrefabHelper.cs.meta">
+      <Link>Vexe\Library\Helpers\PrefabHelper.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Editor\Vexe\LICENSE.txt.meta">
+      <Link>Vexe\LICENSE.txt.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Editor\Vexe\ScriptableAssets.meta">
+      <Link>Vexe\ScriptableAssets.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Editor\Vexe\ScriptableAssets\BetterEditorPrefs.asset.meta">
+      <Link>Vexe\ScriptableAssets\BetterEditorPrefs.asset.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Editor\Vexe\ScriptableAssets\VFWSettings.asset">
+      <Link>Vexe\ScriptableAssets\VFWSettings.asset</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Editor\Vexe\ScriptableAssets\VFWSettings.asset.meta">
+      <Link>Vexe\ScriptableAssets\VFWSettings.asset.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Editor\Vexe\Types.meta">
+      <Link>Vexe\Types.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Editor\Vexe\Types\BetterUndo.meta">
+      <Link>Vexe\Types\BetterUndo.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Editor\Vexe\Types\BetterUndo\BetterUndo.cs.meta">
+      <Link>Vexe\Types\BetterUndo\BetterUndo.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Editor\Vexe\Types\BetterUndo\Operations.meta">
+      <Link>Vexe\Types\BetterUndo\Operations.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Editor\Vexe\Types\BetterUndo\Operations\BasicOp.cs.meta">
+      <Link>Vexe\Types\BetterUndo\Operations\BasicOp.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Editor\Vexe\Types\BetterUndo\Operations\IUndoOp.cs.meta">
+      <Link>Vexe\Types\BetterUndo\Operations\IUndoOp.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Editor\Vexe\Types\BetterUndo\Operations\ListOps.cs.meta">
+      <Link>Vexe\Types\BetterUndo\Operations\ListOps.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Editor\Vexe\Types\BetterUndo\Operations\SelectionOp.cs.meta">
+      <Link>Vexe\Types\BetterUndo\Operations\SelectionOp.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Editor\Vexe\Types\BetterUndo\Operations\SetVarOp.cs.meta">
+      <Link>Vexe\Types\BetterUndo\Operations\SetVarOp.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Editor\Vexe\Types\EditorMember.cs.meta">
+      <Link>Vexe\Types\EditorMember.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Editor\Vexe\Types\Foldouts.cs.meta">
+      <Link>Vexe\Types\Foldouts.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Editor\Vexe\Types\SelectionMemorizer.cs.meta">
+      <Link>Vexe\Types\SelectionMemorizer.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Editor\Vexe\Types\VFWSettings.cs.meta">
+      <Link>Vexe\Types\VFWSettings.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Editor\Vexe\Visibility.meta">
+      <Link>Vexe\Visibility.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Editor\Vexe\Visibility\VisibilityAttributes.cs.meta">
+      <Link>Vexe\Visibility\VisibilityAttributes.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Editor\Vexe\Visibility\VisibilityLogic.cs.meta">
+      <Link>Vexe\Visibility\VisibilityLogic.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Editor\Vexe\Windows.meta">
+      <Link>Vexe\Windows.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Editor\Vexe\Windows\BetterWindow.cs.meta">
+      <Link>Vexe\Windows\BetterWindow.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Editor\Vexe\Windows\SelectionWindow.cs.meta">
+      <Link>Vexe\Windows\SelectionWindow.cs.meta</Link>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="..\VFWSources\Assets\Plugins\Editor\Vexe\LICENSE.txt">
+      <Link>Vexe\LICENSE.txt</Link>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\VFW\VFW.csproj">
+      <Project>{19197553-be51-4850-b591-fdc2c2c49b49}</Project>
+      <Name>VFW</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

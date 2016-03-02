@@ -1,0 +1,1244 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{19197553-BE51-4850-B591-FDC2C2C49B49}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>VFW</RootNamespace>
+    <AssemblyName>VFW</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BasicSerializer, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\VFWSources\Assets\Plugins\Vexe\Runtime\FastSave\Serializer\BasicSerializer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UnityEngine">
+      <HintPath>..\..\..\..\Program Files\Unity_5.3.1f1\Editor\Data\Managed\UnityEngine.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\FastSave\Core\FSCommon.cs">
+      <Link>Vexe\Runtime\FastSave\Core\FSCommon.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\FastSave\Core\Load.cs">
+      <Link>Vexe\Runtime\FastSave\Core\Load.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\FastSave\Core\Save.cs">
+      <Link>Vexe\Runtime\FastSave\Core\Save.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\FastSave\Other\FSAttributes.cs">
+      <Link>Vexe\Runtime\FastSave\Other\FSAttributes.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\FastSave\Other\FSExtensions.cs">
+      <Link>Vexe\Runtime\FastSave\Other\FSExtensions.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\FastSave\Other\FSMarker.cs">
+      <Link>Vexe\Runtime\FastSave\Other\FSMarker.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\FastSave\Other\FSReference.cs">
+      <Link>Vexe\Runtime\FastSave\Other\FSReference.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\FastSave\Serializers\AnimationSerializer.cs">
+      <Link>Vexe\Runtime\FastSave\Serializers\AnimationSerializer.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\FastSave\Serializers\AssetReferenceSerializer.cs">
+      <Link>Vexe\Runtime\FastSave\Serializers\AssetReferenceSerializer.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\FastSave\Serializers\ExplicitComponentSerializer.cs">
+      <Link>Vexe\Runtime\FastSave\Serializers\ExplicitComponentSerializer.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\FastSave\Serializers\GameObjectSerializer.cs">
+      <Link>Vexe\Runtime\FastSave\Serializers\GameObjectSerializer.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\FastSave\Serializers\LightSerializer.cs">
+      <Link>Vexe\Runtime\FastSave\Serializers\LightSerializer.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\FastSave\Serializers\ReflectiveComponentSerializer.cs">
+      <Link>Vexe\Runtime\FastSave\Serializers\ReflectiveComponentSerializer.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\FastSave\Serializer\BinaryX20\BinaryX20.cs">
+      <Link>Vexe\Runtime\FastSave\Serializer\BinaryX20\BinaryX20.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\FastSave\Serializer\BinaryX20\Internal\X20Logic.cs">
+      <Link>Vexe\Runtime\FastSave\Serializer\BinaryX20\Internal\X20Logic.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\FastSave\Serializer\BinaryX20\Internal\X20Member.cs">
+      <Link>Vexe\Runtime\FastSave\Serializer\BinaryX20\Internal\X20Member.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\FastSave\Serializer\BinaryX20\Internal\X20Reflection.cs">
+      <Link>Vexe\Runtime\FastSave\Serializer\BinaryX20\Internal\X20Reflection.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\FastSave\Serializer\BinaryX20\Serializers\ArraySerializer.cs">
+      <Link>Vexe\Runtime\FastSave\Serializer\BinaryX20\Serializers\ArraySerializer.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\FastSave\Serializer\BinaryX20\Serializers\BaseSerializer.cs">
+      <Link>Vexe\Runtime\FastSave\Serializer\BinaryX20\Serializers\BaseSerializer.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\FastSave\Serializer\BinaryX20\Serializers\CollectionSerializer.cs">
+      <Link>Vexe\Runtime\FastSave\Serializer\BinaryX20\Serializers\CollectionSerializer.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\FastSave\Serializer\BinaryX20\Serializers\DictionarySerializer.cs">
+      <Link>Vexe\Runtime\FastSave\Serializer\BinaryX20\Serializers\DictionarySerializer.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\FastSave\Serializer\BinaryX20\Serializers\EnumSerializer.cs">
+      <Link>Vexe\Runtime\FastSave\Serializer\BinaryX20\Serializers\EnumSerializer.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\FastSave\Serializer\BinaryX20\Serializers\ListSerializer.cs">
+      <Link>Vexe\Runtime\FastSave\Serializer\BinaryX20\Serializers\ListSerializer.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\FastSave\Serializer\BinaryX20\Serializers\PrimitiveSerializer.cs">
+      <Link>Vexe\Runtime\FastSave\Serializer\BinaryX20\Serializers\PrimitiveSerializer.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\FastSave\Serializer\BinaryX20\Serializers\ReflectiveSerializer.cs">
+      <Link>Vexe\Runtime\FastSave\Serializer\BinaryX20\Serializers\ReflectiveSerializer.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\FastSave\Serializer\BinaryX20\Serializers\StrongSerializer.cs">
+      <Link>Vexe\Runtime\FastSave\Serializer\BinaryX20\Serializers\StrongSerializer.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\FastSave\Serializer\BinaryX20\Serializers\TypeSerializer.cs">
+      <Link>Vexe\Runtime\FastSave\Serializer\BinaryX20\Serializers\TypeSerializer.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\FastSave\Serializer\BinaryX20\Serializers\UnityStructs.cs">
+      <Link>Vexe\Runtime\FastSave\Serializer\BinaryX20\Serializers\UnityStructs.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\FastSave\Storage\AssetStorage.cs">
+      <Link>Vexe\Runtime\FastSave\Storage\AssetStorage.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\FastSave\Storage\PrefabStorage.cs">
+      <Link>Vexe\Runtime\FastSave\Storage\PrefabStorage.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Library\Extensions\AnimatorExtensions.cs">
+      <Link>Vexe\Runtime\Library\Extensions\AnimatorExtensions.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Library\Extensions\ComponentExtensions.cs">
+      <Link>Vexe\Runtime\Library\Extensions\ComponentExtensions.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Library\Extensions\DelegateExtensions.cs">
+      <Link>Vexe\Runtime\Library\Extensions\DelegateExtensions.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Library\Extensions\FastReflection.cs">
+      <Link>Vexe\Runtime\Library\Extensions\FastReflection.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Library\Extensions\Flags.cs">
+      <Link>Vexe\Runtime\Library\Extensions\Flags.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Library\Extensions\GameObjectExtensions.cs">
+      <Link>Vexe\Runtime\Library\Extensions\GameObjectExtensions.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Library\Extensions\GenericEnumerableExtensions.cs">
+      <Link>Vexe\Runtime\Library\Extensions\GenericEnumerableExtensions.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Library\Extensions\LayerMaskExtensions.cs">
+      <Link>Vexe\Runtime\Library\Extensions\LayerMaskExtensions.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Library\Extensions\MemberInfoExtensions.cs">
+      <Link>Vexe\Runtime\Library\Extensions\MemberInfoExtensions.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Library\Extensions\MethodInfoExtensions.cs">
+      <Link>Vexe\Runtime\Library\Extensions\MethodInfoExtensions.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Library\Extensions\OtherExtensions.cs">
+      <Link>Vexe\Runtime\Library\Extensions\OtherExtensions.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Library\Extensions\PropertyInfoExtensions.cs">
+      <Link>Vexe\Runtime\Library\Extensions\PropertyInfoExtensions.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Library\Extensions\RendererExtensions.cs">
+      <Link>Vexe\Runtime\Library\Extensions\RendererExtensions.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Library\Extensions\RigidbodyExtensions.cs">
+      <Link>Vexe\Runtime\Library\Extensions\RigidbodyExtensions.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Library\Extensions\StringExtensions.cs">
+      <Link>Vexe\Runtime\Library\Extensions\StringExtensions.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Library\Extensions\SystemObjectExtensions.cs">
+      <Link>Vexe\Runtime\Library\Extensions\SystemObjectExtensions.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Library\Extensions\TransformExtensions.cs">
+      <Link>Vexe\Runtime\Library\Extensions\TransformExtensions.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Library\Extensions\TypeExtensions.cs">
+      <Link>Vexe\Runtime\Library\Extensions\TypeExtensions.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Library\Extensions\UnityObjectExtensions.cs">
+      <Link>Vexe\Runtime\Library\Extensions\UnityObjectExtensions.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Library\Extensions\VectorExtensions.cs">
+      <Link>Vexe\Runtime\Library\Extensions\VectorExtensions.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Library\Helpers\Assert.cs">
+      <Link>Vexe\Runtime\Library\Helpers\Assert.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Library\Helpers\EventsHelper.cs">
+      <Link>Vexe\Runtime\Library\Helpers\EventsHelper.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Library\Helpers\GizHelper.cs">
+      <Link>Vexe\Runtime\Library\Helpers\GizHelper.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Library\Helpers\GOHelper.cs">
+      <Link>Vexe\Runtime\Library\Helpers\GOHelper.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Library\Helpers\ReflectionHelper.cs">
+      <Link>Vexe\Runtime\Library\Helpers\ReflectionHelper.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Library\Helpers\RuntimeHelper.cs">
+      <Link>Vexe\Runtime\Library\Helpers\RuntimeHelper.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Serialization\SerializationAttributes.cs">
+      <Link>Vexe\Runtime\Serialization\SerializationAttributes.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Serialization\SerializationData.cs">
+      <Link>Vexe\Runtime\Serialization\SerializationData.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Serialization\SerializationLogic.cs">
+      <Link>Vexe\Runtime\Serialization\SerializationLogic.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Serialization\Serializers\FullSerializer\FullSerializerBackend.cs">
+      <Link>Vexe\Runtime\Serialization\Serializers\FullSerializer\FullSerializerBackend.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Serialization\Serializers\FullSerializer\MethodInfoConverter.cs">
+      <Link>Vexe\Runtime\Serialization\Serializers\FullSerializer\MethodInfoConverter.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\Converters\fsArrayConverter.cs">
+      <Link>Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\Converters\fsArrayConverter.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\Converters\fsDateConverter.cs">
+      <Link>Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\Converters\fsDateConverter.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\Converters\fsDictionaryConverter.cs">
+      <Link>Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\Converters\fsDictionaryConverter.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\Converters\fsEnumConverter.cs">
+      <Link>Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\Converters\fsEnumConverter.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\Converters\fsGuidConverter.cs">
+      <Link>Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\Converters\fsGuidConverter.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\Converters\fsIEnumerableConverter.cs">
+      <Link>Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\Converters\fsIEnumerableConverter.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\Converters\fsKeyValuePairConverter.cs">
+      <Link>Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\Converters\fsKeyValuePairConverter.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\Converters\fsNullableConverter.cs">
+      <Link>Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\Converters\fsNullableConverter.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\Converters\fsPrimitiveConverter.cs">
+      <Link>Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\Converters\fsPrimitiveConverter.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\Converters\fsReflectedConverter.cs">
+      <Link>Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\Converters\fsReflectedConverter.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\Converters\fsTypeConverter.cs">
+      <Link>Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\Converters\fsTypeConverter.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\Converters\fsWeakReferenceConverter.cs">
+      <Link>Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\Converters\fsWeakReferenceConverter.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\Converters\Unity\AnimationCurve_DirectConverter.cs">
+      <Link>Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\Converters\Unity\AnimationCurve_DirectConverter.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\Converters\Unity\Bounds_DirectConverter.cs">
+      <Link>Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\Converters\Unity\Bounds_DirectConverter.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\Converters\Unity\Gradient_DirectConverter.cs">
+      <Link>Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\Converters\Unity\Gradient_DirectConverter.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\Converters\Unity\Keyframe_DirectConverter.cs">
+      <Link>Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\Converters\Unity\Keyframe_DirectConverter.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\Converters\Unity\LayerMask_DirectConverter.cs">
+      <Link>Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\Converters\Unity\LayerMask_DirectConverter.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\Converters\Unity\Rect_DirectConverter.cs">
+      <Link>Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\Converters\Unity\Rect_DirectConverter.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\fsAotCompilationManager.cs">
+      <Link>Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\fsAotCompilationManager.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\fsBaseConverter.cs">
+      <Link>Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\fsBaseConverter.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\fsConfig.cs">
+      <Link>Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\fsConfig.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\fsContext.cs">
+      <Link>Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\fsContext.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\fsConverter.cs">
+      <Link>Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\fsConverter.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\fsConverterRegistrar.cs">
+      <Link>Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\fsConverterRegistrar.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\fsData.cs">
+      <Link>Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\fsData.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\fsDirectConverter.cs">
+      <Link>Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\fsDirectConverter.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\fsExceptions.cs">
+      <Link>Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\fsExceptions.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\fsIgnoreAttribute.cs">
+      <Link>Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\fsIgnoreAttribute.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\fsISerializationCallbacks.cs">
+      <Link>Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\fsISerializationCallbacks.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\fsJsonParser.cs">
+      <Link>Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\fsJsonParser.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\fsJsonPrinter.cs">
+      <Link>Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\fsJsonPrinter.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\fsMemberSerialization.cs">
+      <Link>Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\fsMemberSerialization.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\fsObjectAttribute.cs">
+      <Link>Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\fsObjectAttribute.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\fsObjectProcessor.cs">
+      <Link>Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\fsObjectProcessor.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\fsPropertyAttribute.cs">
+      <Link>Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\fsPropertyAttribute.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\fsResult.cs">
+      <Link>Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\fsResult.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\fsSerializer.cs">
+      <Link>Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\fsSerializer.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\Internal\fsCyclicReferenceManager.cs">
+      <Link>Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\Internal\fsCyclicReferenceManager.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\Internal\fsOption.cs">
+      <Link>Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\Internal\fsOption.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\Internal\fsPortableReflection.cs">
+      <Link>Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\Internal\fsPortableReflection.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\Internal\fsTypeExtensions.cs">
+      <Link>Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\Internal\fsTypeExtensions.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\Internal\fsVersionedType.cs">
+      <Link>Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\Internal\fsVersionedType.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\Internal\fsVersionManager.cs">
+      <Link>Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\Internal\fsVersionManager.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\Reflection\fsMetaProperty.cs">
+      <Link>Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\Reflection\fsMetaProperty.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\Reflection\fsMetaType.cs">
+      <Link>Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\Reflection\fsMetaType.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\Reflection\fsReflectionUtility.cs">
+      <Link>Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\Reflection\fsReflectionUtility.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\Reflection\fsTypeLookup.cs">
+      <Link>Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\Reflection\fsTypeLookup.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Serialization\Serializers\FullSerializer\UnityObjectConverter.cs">
+      <Link>Vexe\Runtime\Serialization\Serializers\FullSerializer\UnityObjectConverter.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Serialization\Serializers\SerializerBackend.cs">
+      <Link>Vexe\Runtime\Serialization\Serializers\SerializerBackend.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Types\Attributes\API\Categories\CategoryAttribute.cs">
+      <Link>Vexe\Runtime\Types\Attributes\API\Categories\CategoryAttribute.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Types\Attributes\API\Categories\CategoryDisplay.cs">
+      <Link>Vexe\Runtime\Types\Attributes\API\Categories\CategoryDisplay.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Types\Attributes\API\Categories\CategoryMemberType.cs">
+      <Link>Vexe\Runtime\Types\Attributes\API\Categories\CategoryMemberType.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Types\Attributes\API\Categories\CategorySetOp.cs">
+      <Link>Vexe\Runtime\Types\Attributes\API\Categories\CategorySetOp.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Types\Attributes\API\Categories\DefineCategoriesAttribute.cs">
+      <Link>Vexe\Runtime\Types\Attributes\API\Categories\DefineCategoriesAttribute.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Types\Attributes\API\Categories\DefineCategoryAttribute.cs">
+      <Link>Vexe\Runtime\Types\Attributes\API\Categories\DefineCategoryAttribute.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Types\Attributes\API\DefaultAttribute.cs">
+      <Link>Vexe\Runtime\Types\Attributes\API\DefaultAttribute.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Types\Attributes\API\DisplayAttribute.cs">
+      <Link>Vexe\Runtime\Types\Attributes\API\DisplayAttribute.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Types\Attributes\API\DrawingAttributes.cs">
+      <Link>Vexe\Runtime\Types\Attributes\API\DrawingAttributes.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Types\Attributes\API\UsingAttribute.cs">
+      <Link>Vexe\Runtime\Types\Attributes\API\UsingAttribute.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Types\Attributes\API\VisibilityAttributes.cs">
+      <Link>Vexe\Runtime\Types\Attributes\API\VisibilityAttributes.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Types\Attributes\User\Constraints\ClampAttributes.cs">
+      <Link>Vexe\Runtime\Types\Attributes\User\Constraints\ClampAttributes.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Types\Attributes\User\Constraints\ConstrainValueAttribute.cs">
+      <Link>Vexe\Runtime\Types\Attributes\User\Constraints\ConstrainValueAttribute.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Types\Attributes\User\Constraints\IPAttribute.cs">
+      <Link>Vexe\Runtime\Types\Attributes\User\Constraints\IPAttribute.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Types\Attributes\User\Constraints\MaxAttributes.cs">
+      <Link>Vexe\Runtime\Types\Attributes\User\Constraints\MaxAttributes.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Types\Attributes\User\Constraints\MinAttributes.cs">
+      <Link>Vexe\Runtime\Types\Attributes\User\Constraints\MinAttributes.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Types\Attributes\User\Constraints\RegexAttribute.cs">
+      <Link>Vexe\Runtime\Types\Attributes\User\Constraints\RegexAttribute.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Types\Attributes\User\Decorates\CommentAttribute.cs">
+      <Link>Vexe\Runtime\Types\Attributes\User\Decorates\CommentAttribute.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Types\Attributes\User\Decorates\WhiteSpaceAttribute.cs">
+      <Link>Vexe\Runtime\Types\Attributes\User\Decorates\WhiteSpaceAttribute.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Types\Attributes\User\Enums\EnumMaskAttribute.cs">
+      <Link>Vexe\Runtime\Types\Attributes\User\Enums\EnumMaskAttribute.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Types\Attributes\User\Filters\FilterEnumAttribute.cs">
+      <Link>Vexe\Runtime\Types\Attributes\User\Filters\FilterEnumAttribute.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Types\Attributes\User\Filters\FilterTagsAttribute.cs">
+      <Link>Vexe\Runtime\Types\Attributes\User\Filters\FilterTagsAttribute.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Types\Attributes\User\Others\AssignableAttribute.cs">
+      <Link>Vexe\Runtime\Types\Attributes\User\Others\AssignableAttribute.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Types\Attributes\User\Others\ButtonAttribute.cs">
+      <Link>Vexe\Runtime\Types\Attributes\User\Others\ButtonAttribute.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Types\Attributes\User\Others\DraggableAttribute.cs">
+      <Link>Vexe\Runtime\Types\Attributes\User\Others\DraggableAttribute.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Types\Attributes\User\Others\InlineAttribute.cs">
+      <Link>Vexe\Runtime\Types\Attributes\User\Others\InlineAttribute.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Types\Attributes\User\Others\OnChangedAttribute.cs">
+      <Link>Vexe\Runtime\Types\Attributes\User\Others\OnChangedAttribute.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Types\Attributes\User\Others\ParagraphAttribute.cs">
+      <Link>Vexe\Runtime\Types\Attributes\User\Others\ParagraphAttribute.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Types\Attributes\User\Others\PathAttribute.cs">
+      <Link>Vexe\Runtime\Types\Attributes\User\Others\PathAttribute.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Types\Attributes\User\Others\ResourcePathAttribute.cs">
+      <Link>Vexe\Runtime\Types\Attributes\User\Others\ResourcePathAttribute.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Types\Attributes\User\Others\ShowTypeAttribute.cs">
+      <Link>Vexe\Runtime\Types\Attributes\User\Others\ShowTypeAttribute.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Types\Attributes\User\Others\SliderAttributes.cs">
+      <Link>Vexe\Runtime\Types\Attributes\User\Others\SliderAttributes.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Types\Attributes\User\Popups\AnimVarAttribute.cs">
+      <Link>Vexe\Runtime\Types\Attributes\User\Popups\AnimVarAttribute.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Types\Attributes\User\Popups\InputAxisAttribute.cs">
+      <Link>Vexe\Runtime\Types\Attributes\User\Popups\InputAxisAttribute.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Types\Attributes\User\Popups\PopupAttribute.cs">
+      <Link>Vexe\Runtime\Types\Attributes\User\Popups\PopupAttribute.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Types\Attributes\User\Popups\TagsAttribute.cs">
+      <Link>Vexe\Runtime\Types\Attributes\User\Popups\TagsAttribute.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Types\Attributes\User\Randoms\RandAttributes.cs">
+      <Link>Vexe\Runtime\Types\Attributes\User\Randoms\RandAttributes.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Types\Attributes\User\Requirements\RequirementAttributes.cs">
+      <Link>Vexe\Runtime\Types\Attributes\User\Requirements\RequirementAttributes.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Types\Attributes\User\Selections\SelectEnumAttribute.cs">
+      <Link>Vexe\Runtime\Types\Attributes\User\Selections\SelectEnumAttribute.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Types\Attributes\User\Selections\SelectObjAttribute.cs">
+      <Link>Vexe\Runtime\Types\Attributes\User\Selections\SelectObjAttribute.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Types\Attributes\User\Selections\SelectSceneAttribute.cs">
+      <Link>Vexe\Runtime\Types\Attributes\User\Selections\SelectSceneAttribute.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Types\Attributes\User\Vectors\BetterVectorAttribute.cs">
+      <Link>Vexe\Runtime\Types\Attributes\User\Vectors\BetterVectorAttribute.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Types\Core\BaseBehaviour.cs">
+      <Link>Vexe\Runtime\Types\Core\BaseBehaviour.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Types\Core\BaseScriptableObject.cs">
+      <Link>Vexe\Runtime\Types\Core\BaseScriptableObject.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Types\Core\BetterBehaviour.cs">
+      <Link>Vexe\Runtime\Types\Core\BetterBehaviour.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Types\Core\BetterScriptableObject.cs">
+      <Link>Vexe\Runtime\Types\Core\BetterScriptableObject.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Types\Delegates\BaseDelegates.cs">
+      <Link>Vexe\Runtime\Types\Delegates\BaseDelegates.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Types\Delegates\DelegateSettings.cs">
+      <Link>Vexe\Runtime\Types\Delegates\DelegateSettings.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Types\Delegates\uAction.cs">
+      <Link>Vexe\Runtime\Types\Delegates\uAction.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Types\Delegates\uDelegate.cs">
+      <Link>Vexe\Runtime\Types\Delegates\uDelegate.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Types\Delegates\uFunc.cs">
+      <Link>Vexe\Runtime\Types\Delegates\uFunc.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Types\Others\BetterPrefs.cs">
+      <Link>Vexe\Runtime\Types\Others\BetterPrefs.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Types\Others\Exceptions.cs">
+      <Link>Vexe\Runtime\Types\Others\Exceptions.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Types\Others\KVPList.cs">
+      <Link>Vexe\Runtime\Types\Others\KVPList.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Types\Others\RuntimeMember.cs">
+      <Link>Vexe\Runtime\Types\Others\RuntimeMember.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Types\Others\SerializableDictionary.cs">
+      <Link>Vexe\Runtime\Types\Others\SerializableDictionary.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Types\Others\SerializableType.cs">
+      <Link>Vexe\Runtime\Types\Others\SerializableType.cs</Link>
+    </Compile>
+    <Compile Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Types\Others\Tuple.cs">
+      <Link>Vexe\Runtime\Types\Others\Tuple.cs</Link>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="..\VFWSources\Assets\Plugins\Vexe\HISTORY.txt">
+      <Link>Vexe\HISTORY.txt</Link>
+    </Content>
+    <Content Include="..\VFWSources\Assets\Plugins\Vexe\LICENSE.txt">
+      <Link>Vexe\LICENSE.txt</Link>
+    </Content>
+    <Content Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\FastSave\README.txt">
+      <Link>Vexe\Runtime\FastSave\README.txt</Link>
+    </Content>
+    <Content Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\FastSave\Serializer\BasicSerializer.dll">
+      <Link>Vexe\Runtime\FastSave\Serializer\BasicSerializer.dll</Link>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\HISTORY.txt.meta">
+      <Link>Vexe\HISTORY.txt.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\LICENSE.txt.meta">
+      <Link>Vexe\LICENSE.txt.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime.meta">
+      <Link>Vexe\Runtime.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\FastSave.meta">
+      <Link>Vexe\Runtime\FastSave.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\FastSave\Core.meta">
+      <Link>Vexe\Runtime\FastSave\Core.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\FastSave\Core\FSCommon.cs.meta">
+      <Link>Vexe\Runtime\FastSave\Core\FSCommon.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\FastSave\Core\Load.cs.meta">
+      <Link>Vexe\Runtime\FastSave\Core\Load.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\FastSave\Core\Save.cs.meta">
+      <Link>Vexe\Runtime\FastSave\Core\Save.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\FastSave\Other.meta">
+      <Link>Vexe\Runtime\FastSave\Other.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\FastSave\Other\FSAttributes.cs.meta">
+      <Link>Vexe\Runtime\FastSave\Other\FSAttributes.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\FastSave\Other\FSExtensions.cs.meta">
+      <Link>Vexe\Runtime\FastSave\Other\FSExtensions.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\FastSave\Other\FSMarker.cs.meta">
+      <Link>Vexe\Runtime\FastSave\Other\FSMarker.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\FastSave\Other\FSReference.cs.meta">
+      <Link>Vexe\Runtime\FastSave\Other\FSReference.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\FastSave\README.txt.meta">
+      <Link>Vexe\Runtime\FastSave\README.txt.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\FastSave\Resources.meta">
+      <Link>Vexe\Runtime\FastSave\Resources.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\FastSave\Resources\AssetStorage.asset">
+      <Link>Vexe\Runtime\FastSave\Resources\AssetStorage.asset</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\FastSave\Resources\AssetStorage.asset.meta">
+      <Link>Vexe\Runtime\FastSave\Resources\AssetStorage.asset.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\FastSave\Resources\PrefabStorage.asset">
+      <Link>Vexe\Runtime\FastSave\Resources\PrefabStorage.asset</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\FastSave\Resources\PrefabStorage.asset.meta">
+      <Link>Vexe\Runtime\FastSave\Resources\PrefabStorage.asset.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\FastSave\Serializer.meta">
+      <Link>Vexe\Runtime\FastSave\Serializer.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\FastSave\Serializers.meta">
+      <Link>Vexe\Runtime\FastSave\Serializers.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\FastSave\Serializers\AnimationSerializer.cs.meta">
+      <Link>Vexe\Runtime\FastSave\Serializers\AnimationSerializer.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\FastSave\Serializers\AssetReferenceSerializer.cs.meta">
+      <Link>Vexe\Runtime\FastSave\Serializers\AssetReferenceSerializer.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\FastSave\Serializers\ExplicitComponentSerializer.cs.meta">
+      <Link>Vexe\Runtime\FastSave\Serializers\ExplicitComponentSerializer.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\FastSave\Serializers\GameObjectSerializer.cs.meta">
+      <Link>Vexe\Runtime\FastSave\Serializers\GameObjectSerializer.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\FastSave\Serializers\LightSerializer.cs.meta">
+      <Link>Vexe\Runtime\FastSave\Serializers\LightSerializer.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\FastSave\Serializers\ReflectiveComponentSerializer.cs.meta">
+      <Link>Vexe\Runtime\FastSave\Serializers\ReflectiveComponentSerializer.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\FastSave\Serializer\BasicSerializer.dll.meta">
+      <Link>Vexe\Runtime\FastSave\Serializer\BasicSerializer.dll.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\FastSave\Serializer\BinaryX20.meta">
+      <Link>Vexe\Runtime\FastSave\Serializer\BinaryX20.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\FastSave\Serializer\BinaryX20\BinaryX20.cs.meta">
+      <Link>Vexe\Runtime\FastSave\Serializer\BinaryX20\BinaryX20.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\FastSave\Serializer\BinaryX20\Internal.meta">
+      <Link>Vexe\Runtime\FastSave\Serializer\BinaryX20\Internal.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\FastSave\Serializer\BinaryX20\Internal\X20Logic.cs.meta">
+      <Link>Vexe\Runtime\FastSave\Serializer\BinaryX20\Internal\X20Logic.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\FastSave\Serializer\BinaryX20\Internal\X20Member.cs.meta">
+      <Link>Vexe\Runtime\FastSave\Serializer\BinaryX20\Internal\X20Member.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\FastSave\Serializer\BinaryX20\Internal\X20Reflection.cs.meta">
+      <Link>Vexe\Runtime\FastSave\Serializer\BinaryX20\Internal\X20Reflection.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\FastSave\Serializer\BinaryX20\Serializers.meta">
+      <Link>Vexe\Runtime\FastSave\Serializer\BinaryX20\Serializers.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\FastSave\Serializer\BinaryX20\Serializers\ArraySerializer.cs.meta">
+      <Link>Vexe\Runtime\FastSave\Serializer\BinaryX20\Serializers\ArraySerializer.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\FastSave\Serializer\BinaryX20\Serializers\BaseSerializer.cs.meta">
+      <Link>Vexe\Runtime\FastSave\Serializer\BinaryX20\Serializers\BaseSerializer.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\FastSave\Serializer\BinaryX20\Serializers\CollectionSerializer.cs.meta">
+      <Link>Vexe\Runtime\FastSave\Serializer\BinaryX20\Serializers\CollectionSerializer.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\FastSave\Serializer\BinaryX20\Serializers\DictionarySerializer.cs.meta">
+      <Link>Vexe\Runtime\FastSave\Serializer\BinaryX20\Serializers\DictionarySerializer.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\FastSave\Serializer\BinaryX20\Serializers\EnumSerializer.cs.meta">
+      <Link>Vexe\Runtime\FastSave\Serializer\BinaryX20\Serializers\EnumSerializer.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\FastSave\Serializer\BinaryX20\Serializers\ListSerializer.cs.meta">
+      <Link>Vexe\Runtime\FastSave\Serializer\BinaryX20\Serializers\ListSerializer.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\FastSave\Serializer\BinaryX20\Serializers\PrimitiveSerializer.cs.meta">
+      <Link>Vexe\Runtime\FastSave\Serializer\BinaryX20\Serializers\PrimitiveSerializer.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\FastSave\Serializer\BinaryX20\Serializers\ReflectiveSerializer.cs.meta">
+      <Link>Vexe\Runtime\FastSave\Serializer\BinaryX20\Serializers\ReflectiveSerializer.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\FastSave\Serializer\BinaryX20\Serializers\StrongSerializer.cs.meta">
+      <Link>Vexe\Runtime\FastSave\Serializer\BinaryX20\Serializers\StrongSerializer.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\FastSave\Serializer\BinaryX20\Serializers\TypeSerializer.cs.meta">
+      <Link>Vexe\Runtime\FastSave\Serializer\BinaryX20\Serializers\TypeSerializer.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\FastSave\Serializer\BinaryX20\Serializers\UnityStructs.cs.meta">
+      <Link>Vexe\Runtime\FastSave\Serializer\BinaryX20\Serializers\UnityStructs.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\FastSave\Storage.meta">
+      <Link>Vexe\Runtime\FastSave\Storage.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\FastSave\Storage\AssetStorage.cs.meta">
+      <Link>Vexe\Runtime\FastSave\Storage\AssetStorage.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\FastSave\Storage\PrefabStorage.cs.meta">
+      <Link>Vexe\Runtime\FastSave\Storage\PrefabStorage.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Library.meta">
+      <Link>Vexe\Runtime\Library.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Library\Extensions.meta">
+      <Link>Vexe\Runtime\Library\Extensions.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Library\Extensions\AnimatorExtensions.cs.meta">
+      <Link>Vexe\Runtime\Library\Extensions\AnimatorExtensions.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Library\Extensions\ComponentExtensions.cs.meta">
+      <Link>Vexe\Runtime\Library\Extensions\ComponentExtensions.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Library\Extensions\DelegateExtensions.cs.meta">
+      <Link>Vexe\Runtime\Library\Extensions\DelegateExtensions.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Library\Extensions\FastReflection.cs.meta">
+      <Link>Vexe\Runtime\Library\Extensions\FastReflection.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Library\Extensions\Flags.cs.meta">
+      <Link>Vexe\Runtime\Library\Extensions\Flags.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Library\Extensions\GameObjectExtensions.cs.meta">
+      <Link>Vexe\Runtime\Library\Extensions\GameObjectExtensions.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Library\Extensions\GenericEnumerableExtensions.cs.meta">
+      <Link>Vexe\Runtime\Library\Extensions\GenericEnumerableExtensions.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Library\Extensions\LayerMaskExtensions.cs.meta">
+      <Link>Vexe\Runtime\Library\Extensions\LayerMaskExtensions.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Library\Extensions\MemberInfoExtensions.cs.meta">
+      <Link>Vexe\Runtime\Library\Extensions\MemberInfoExtensions.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Library\Extensions\MethodInfoExtensions.cs.meta">
+      <Link>Vexe\Runtime\Library\Extensions\MethodInfoExtensions.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Library\Extensions\OtherExtensions.cs.meta">
+      <Link>Vexe\Runtime\Library\Extensions\OtherExtensions.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Library\Extensions\PropertyInfoExtensions.cs.meta">
+      <Link>Vexe\Runtime\Library\Extensions\PropertyInfoExtensions.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Library\Extensions\RendererExtensions.cs.meta">
+      <Link>Vexe\Runtime\Library\Extensions\RendererExtensions.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Library\Extensions\RigidbodyExtensions.cs.meta">
+      <Link>Vexe\Runtime\Library\Extensions\RigidbodyExtensions.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Library\Extensions\StringExtensions.cs.meta">
+      <Link>Vexe\Runtime\Library\Extensions\StringExtensions.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Library\Extensions\SystemObjectExtensions.cs.meta">
+      <Link>Vexe\Runtime\Library\Extensions\SystemObjectExtensions.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Library\Extensions\TransformExtensions.cs.meta">
+      <Link>Vexe\Runtime\Library\Extensions\TransformExtensions.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Library\Extensions\TypeExtensions.cs.meta">
+      <Link>Vexe\Runtime\Library\Extensions\TypeExtensions.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Library\Extensions\UnityObjectExtensions.cs.meta">
+      <Link>Vexe\Runtime\Library\Extensions\UnityObjectExtensions.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Library\Extensions\VectorExtensions.cs.meta">
+      <Link>Vexe\Runtime\Library\Extensions\VectorExtensions.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Library\Helpers.meta">
+      <Link>Vexe\Runtime\Library\Helpers.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Library\Helpers\Assert.cs.meta">
+      <Link>Vexe\Runtime\Library\Helpers\Assert.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Library\Helpers\EventsHelper.cs.meta">
+      <Link>Vexe\Runtime\Library\Helpers\EventsHelper.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Library\Helpers\GizHelper.cs.meta">
+      <Link>Vexe\Runtime\Library\Helpers\GizHelper.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Library\Helpers\GOHelper.cs.meta">
+      <Link>Vexe\Runtime\Library\Helpers\GOHelper.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Library\Helpers\ReflectionHelper.cs.meta">
+      <Link>Vexe\Runtime\Library\Helpers\ReflectionHelper.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Library\Helpers\RuntimeHelper.cs.meta">
+      <Link>Vexe\Runtime\Library\Helpers\RuntimeHelper.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Serialization.meta">
+      <Link>Vexe\Runtime\Serialization.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Serialization\SerializationAttributes.cs.meta">
+      <Link>Vexe\Runtime\Serialization\SerializationAttributes.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Serialization\SerializationData.cs.meta">
+      <Link>Vexe\Runtime\Serialization\SerializationData.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Serialization\SerializationLogic.cs.meta">
+      <Link>Vexe\Runtime\Serialization\SerializationLogic.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Serialization\Serializers.meta">
+      <Link>Vexe\Runtime\Serialization\Serializers.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Serialization\Serializers\FullSerializer.meta">
+      <Link>Vexe\Runtime\Serialization\Serializers\FullSerializer.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Serialization\Serializers\FullSerializer\FullSerializerBackend.cs.meta">
+      <Link>Vexe\Runtime\Serialization\Serializers\FullSerializer\FullSerializerBackend.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Serialization\Serializers\FullSerializer\MethodInfoConverter.cs.meta">
+      <Link>Vexe\Runtime\Serialization\Serializers\FullSerializer\MethodInfoConverter.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Serialization\Serializers\FullSerializer\Source.meta">
+      <Link>Vexe\Runtime\Serialization\Serializers\FullSerializer\Source.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\Converters.meta">
+      <Link>Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\Converters.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\Converters\fsArrayConverter.cs.meta">
+      <Link>Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\Converters\fsArrayConverter.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\Converters\fsDateConverter.cs.meta">
+      <Link>Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\Converters\fsDateConverter.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\Converters\fsDictionaryConverter.cs.meta">
+      <Link>Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\Converters\fsDictionaryConverter.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\Converters\fsEnumConverter.cs.meta">
+      <Link>Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\Converters\fsEnumConverter.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\Converters\fsGuidConverter.cs.meta">
+      <Link>Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\Converters\fsGuidConverter.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\Converters\fsIEnumerableConverter.cs.meta">
+      <Link>Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\Converters\fsIEnumerableConverter.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\Converters\fsKeyValuePairConverter.cs.meta">
+      <Link>Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\Converters\fsKeyValuePairConverter.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\Converters\fsNullableConverter.cs.meta">
+      <Link>Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\Converters\fsNullableConverter.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\Converters\fsPrimitiveConverter.cs.meta">
+      <Link>Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\Converters\fsPrimitiveConverter.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\Converters\fsReflectedConverter.cs.meta">
+      <Link>Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\Converters\fsReflectedConverter.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\Converters\fsTypeConverter.cs.meta">
+      <Link>Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\Converters\fsTypeConverter.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\Converters\fsWeakReferenceConverter.cs.meta">
+      <Link>Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\Converters\fsWeakReferenceConverter.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\Converters\Unity.meta">
+      <Link>Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\Converters\Unity.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\Converters\Unity\AnimationCurve_DirectConverter.cs.meta">
+      <Link>Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\Converters\Unity\AnimationCurve_DirectConverter.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\Converters\Unity\Bounds_DirectConverter.cs.meta">
+      <Link>Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\Converters\Unity\Bounds_DirectConverter.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\Converters\Unity\Gradient_DirectConverter.cs.meta">
+      <Link>Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\Converters\Unity\Gradient_DirectConverter.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\Converters\Unity\Keyframe_DirectConverter.cs.meta">
+      <Link>Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\Converters\Unity\Keyframe_DirectConverter.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\Converters\Unity\LayerMask_DirectConverter.cs.meta">
+      <Link>Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\Converters\Unity\LayerMask_DirectConverter.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\Converters\Unity\Rect_DirectConverter.cs.meta">
+      <Link>Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\Converters\Unity\Rect_DirectConverter.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\fsAotCompilationManager.cs.meta">
+      <Link>Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\fsAotCompilationManager.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\fsBaseConverter.cs.meta">
+      <Link>Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\fsBaseConverter.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\fsConfig.cs.meta">
+      <Link>Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\fsConfig.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\fsContext.cs.meta">
+      <Link>Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\fsContext.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\fsConverter.cs.meta">
+      <Link>Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\fsConverter.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\fsConverterRegistrar.cs.meta">
+      <Link>Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\fsConverterRegistrar.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\fsData.cs.meta">
+      <Link>Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\fsData.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\fsDirectConverter.cs.meta">
+      <Link>Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\fsDirectConverter.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\fsExceptions.cs.meta">
+      <Link>Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\fsExceptions.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\fsIgnoreAttribute.cs.meta">
+      <Link>Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\fsIgnoreAttribute.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\fsISerializationCallbacks.cs.meta">
+      <Link>Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\fsISerializationCallbacks.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\fsJsonParser.cs.meta">
+      <Link>Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\fsJsonParser.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\fsJsonPrinter.cs.meta">
+      <Link>Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\fsJsonPrinter.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\fsMemberSerialization.cs.meta">
+      <Link>Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\fsMemberSerialization.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\fsObjectAttribute.cs.meta">
+      <Link>Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\fsObjectAttribute.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\fsObjectProcessor.cs.meta">
+      <Link>Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\fsObjectProcessor.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\fsPropertyAttribute.cs.meta">
+      <Link>Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\fsPropertyAttribute.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\fsResult.cs.meta">
+      <Link>Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\fsResult.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\fsSerializer.cs.meta">
+      <Link>Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\fsSerializer.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\Internal.meta">
+      <Link>Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\Internal.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\Internal\fsCyclicReferenceManager.cs.meta">
+      <Link>Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\Internal\fsCyclicReferenceManager.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\Internal\fsOption.cs.meta">
+      <Link>Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\Internal\fsOption.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\Internal\fsPortableReflection.cs.meta">
+      <Link>Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\Internal\fsPortableReflection.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\Internal\fsTypeExtensions.cs.meta">
+      <Link>Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\Internal\fsTypeExtensions.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\Internal\fsVersionedType.cs.meta">
+      <Link>Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\Internal\fsVersionedType.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\Internal\fsVersionManager.cs.meta">
+      <Link>Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\Internal\fsVersionManager.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\LICENSE.md">
+      <Link>Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\LICENSE.md</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\LICENSE.md.meta">
+      <Link>Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\LICENSE.md.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\LIMITATIONS.md">
+      <Link>Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\LIMITATIONS.md</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\LIMITATIONS.md.meta">
+      <Link>Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\LIMITATIONS.md.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\README.md">
+      <Link>Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\README.md</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\README.md.meta">
+      <Link>Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\README.md.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\Reflection.meta">
+      <Link>Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\Reflection.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\Reflection\fsMetaProperty.cs.meta">
+      <Link>Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\Reflection\fsMetaProperty.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\Reflection\fsMetaType.cs.meta">
+      <Link>Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\Reflection\fsMetaType.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\Reflection\fsReflectionUtility.cs.meta">
+      <Link>Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\Reflection\fsReflectionUtility.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\Reflection\fsTypeLookup.cs.meta">
+      <Link>Vexe\Runtime\Serialization\Serializers\FullSerializer\Source\Reflection\fsTypeLookup.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Serialization\Serializers\FullSerializer\UnityObjectConverter.cs.meta">
+      <Link>Vexe\Runtime\Serialization\Serializers\FullSerializer\UnityObjectConverter.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Serialization\Serializers\SerializerBackend.cs.meta">
+      <Link>Vexe\Runtime\Serialization\Serializers\SerializerBackend.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Types.meta">
+      <Link>Vexe\Runtime\Types.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Types\Attributes.meta">
+      <Link>Vexe\Runtime\Types\Attributes.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Types\Attributes\API.meta">
+      <Link>Vexe\Runtime\Types\Attributes\API.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Types\Attributes\API\Categories.meta">
+      <Link>Vexe\Runtime\Types\Attributes\API\Categories.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Types\Attributes\API\Categories\CategoryAttribute.cs.meta">
+      <Link>Vexe\Runtime\Types\Attributes\API\Categories\CategoryAttribute.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Types\Attributes\API\Categories\CategoryDisplay.cs.meta">
+      <Link>Vexe\Runtime\Types\Attributes\API\Categories\CategoryDisplay.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Types\Attributes\API\Categories\CategoryMemberType.cs.meta">
+      <Link>Vexe\Runtime\Types\Attributes\API\Categories\CategoryMemberType.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Types\Attributes\API\Categories\CategorySetOp.cs.meta">
+      <Link>Vexe\Runtime\Types\Attributes\API\Categories\CategorySetOp.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Types\Attributes\API\Categories\DefineCategoriesAttribute.cs.meta">
+      <Link>Vexe\Runtime\Types\Attributes\API\Categories\DefineCategoriesAttribute.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Types\Attributes\API\Categories\DefineCategoryAttribute.cs.meta">
+      <Link>Vexe\Runtime\Types\Attributes\API\Categories\DefineCategoryAttribute.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Types\Attributes\API\DefaultAttribute.cs.meta">
+      <Link>Vexe\Runtime\Types\Attributes\API\DefaultAttribute.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Types\Attributes\API\DisplayAttribute.cs.meta">
+      <Link>Vexe\Runtime\Types\Attributes\API\DisplayAttribute.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Types\Attributes\API\DrawingAttributes.cs.meta">
+      <Link>Vexe\Runtime\Types\Attributes\API\DrawingAttributes.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Types\Attributes\API\UsingAttribute.cs.meta">
+      <Link>Vexe\Runtime\Types\Attributes\API\UsingAttribute.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Types\Attributes\API\VisibilityAttributes.cs.meta">
+      <Link>Vexe\Runtime\Types\Attributes\API\VisibilityAttributes.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Types\Attributes\User.meta">
+      <Link>Vexe\Runtime\Types\Attributes\User.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Types\Attributes\User\Constraints.meta">
+      <Link>Vexe\Runtime\Types\Attributes\User\Constraints.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Types\Attributes\User\Constraints\ClampAttributes.cs.meta">
+      <Link>Vexe\Runtime\Types\Attributes\User\Constraints\ClampAttributes.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Types\Attributes\User\Constraints\ConstrainValueAttribute.cs.meta">
+      <Link>Vexe\Runtime\Types\Attributes\User\Constraints\ConstrainValueAttribute.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Types\Attributes\User\Constraints\IPAttribute.cs.meta">
+      <Link>Vexe\Runtime\Types\Attributes\User\Constraints\IPAttribute.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Types\Attributes\User\Constraints\MaxAttributes.cs.meta">
+      <Link>Vexe\Runtime\Types\Attributes\User\Constraints\MaxAttributes.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Types\Attributes\User\Constraints\MinAttributes.cs.meta">
+      <Link>Vexe\Runtime\Types\Attributes\User\Constraints\MinAttributes.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Types\Attributes\User\Constraints\RegexAttribute.cs.meta">
+      <Link>Vexe\Runtime\Types\Attributes\User\Constraints\RegexAttribute.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Types\Attributes\User\Decorates.meta">
+      <Link>Vexe\Runtime\Types\Attributes\User\Decorates.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Types\Attributes\User\Decorates\CommentAttribute.cs.meta">
+      <Link>Vexe\Runtime\Types\Attributes\User\Decorates\CommentAttribute.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Types\Attributes\User\Decorates\WhiteSpaceAttribute.cs.meta">
+      <Link>Vexe\Runtime\Types\Attributes\User\Decorates\WhiteSpaceAttribute.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Types\Attributes\User\Enums.meta">
+      <Link>Vexe\Runtime\Types\Attributes\User\Enums.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Types\Attributes\User\Enums\EnumMaskAttribute.cs.meta">
+      <Link>Vexe\Runtime\Types\Attributes\User\Enums\EnumMaskAttribute.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Types\Attributes\User\Filters.meta">
+      <Link>Vexe\Runtime\Types\Attributes\User\Filters.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Types\Attributes\User\Filters\FilterEnumAttribute.cs.meta">
+      <Link>Vexe\Runtime\Types\Attributes\User\Filters\FilterEnumAttribute.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Types\Attributes\User\Filters\FilterTagsAttribute.cs.meta">
+      <Link>Vexe\Runtime\Types\Attributes\User\Filters\FilterTagsAttribute.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Types\Attributes\User\Others.meta">
+      <Link>Vexe\Runtime\Types\Attributes\User\Others.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Types\Attributes\User\Others\AssignableAttribute.cs.meta">
+      <Link>Vexe\Runtime\Types\Attributes\User\Others\AssignableAttribute.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Types\Attributes\User\Others\ButtonAttribute.cs.meta">
+      <Link>Vexe\Runtime\Types\Attributes\User\Others\ButtonAttribute.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Types\Attributes\User\Others\DraggableAttribute.cs.meta">
+      <Link>Vexe\Runtime\Types\Attributes\User\Others\DraggableAttribute.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Types\Attributes\User\Others\InlineAttribute.cs.meta">
+      <Link>Vexe\Runtime\Types\Attributes\User\Others\InlineAttribute.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Types\Attributes\User\Others\OnChangedAttribute.cs.meta">
+      <Link>Vexe\Runtime\Types\Attributes\User\Others\OnChangedAttribute.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Types\Attributes\User\Others\ParagraphAttribute.cs.meta">
+      <Link>Vexe\Runtime\Types\Attributes\User\Others\ParagraphAttribute.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Types\Attributes\User\Others\PathAttribute.cs.meta">
+      <Link>Vexe\Runtime\Types\Attributes\User\Others\PathAttribute.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Types\Attributes\User\Others\ResourcePathAttribute.cs.meta">
+      <Link>Vexe\Runtime\Types\Attributes\User\Others\ResourcePathAttribute.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Types\Attributes\User\Others\ShowTypeAttribute.cs.meta">
+      <Link>Vexe\Runtime\Types\Attributes\User\Others\ShowTypeAttribute.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Types\Attributes\User\Others\SliderAttributes.cs.meta">
+      <Link>Vexe\Runtime\Types\Attributes\User\Others\SliderAttributes.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Types\Attributes\User\Popups.meta">
+      <Link>Vexe\Runtime\Types\Attributes\User\Popups.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Types\Attributes\User\Popups\AnimVarAttribute.cs.meta">
+      <Link>Vexe\Runtime\Types\Attributes\User\Popups\AnimVarAttribute.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Types\Attributes\User\Popups\InputAxisAttribute.cs.meta">
+      <Link>Vexe\Runtime\Types\Attributes\User\Popups\InputAxisAttribute.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Types\Attributes\User\Popups\PopupAttribute.cs.meta">
+      <Link>Vexe\Runtime\Types\Attributes\User\Popups\PopupAttribute.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Types\Attributes\User\Popups\TagsAttribute.cs.meta">
+      <Link>Vexe\Runtime\Types\Attributes\User\Popups\TagsAttribute.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Types\Attributes\User\Randoms.meta">
+      <Link>Vexe\Runtime\Types\Attributes\User\Randoms.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Types\Attributes\User\Randoms\RandAttributes.cs.meta">
+      <Link>Vexe\Runtime\Types\Attributes\User\Randoms\RandAttributes.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Types\Attributes\User\Requirements.meta">
+      <Link>Vexe\Runtime\Types\Attributes\User\Requirements.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Types\Attributes\User\Requirements\RequirementAttributes.cs.meta">
+      <Link>Vexe\Runtime\Types\Attributes\User\Requirements\RequirementAttributes.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Types\Attributes\User\Selections.meta">
+      <Link>Vexe\Runtime\Types\Attributes\User\Selections.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Types\Attributes\User\Selections\SelectEnumAttribute.cs.meta">
+      <Link>Vexe\Runtime\Types\Attributes\User\Selections\SelectEnumAttribute.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Types\Attributes\User\Selections\SelectObjAttribute.cs.meta">
+      <Link>Vexe\Runtime\Types\Attributes\User\Selections\SelectObjAttribute.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Types\Attributes\User\Selections\SelectSceneAttribute.cs.meta">
+      <Link>Vexe\Runtime\Types\Attributes\User\Selections\SelectSceneAttribute.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Types\Attributes\User\Vectors.meta">
+      <Link>Vexe\Runtime\Types\Attributes\User\Vectors.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Types\Attributes\User\Vectors\BetterVectorAttribute.cs.meta">
+      <Link>Vexe\Runtime\Types\Attributes\User\Vectors\BetterVectorAttribute.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Types\Core.meta">
+      <Link>Vexe\Runtime\Types\Core.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Types\Core\BaseBehaviour.cs.meta">
+      <Link>Vexe\Runtime\Types\Core\BaseBehaviour.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Types\Core\BaseScriptableObject.cs.meta">
+      <Link>Vexe\Runtime\Types\Core\BaseScriptableObject.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Types\Core\BetterBehaviour.cs.meta">
+      <Link>Vexe\Runtime\Types\Core\BetterBehaviour.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Types\Core\BetterScriptableObject.cs.meta">
+      <Link>Vexe\Runtime\Types\Core\BetterScriptableObject.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Types\Delegates.meta">
+      <Link>Vexe\Runtime\Types\Delegates.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Types\Delegates\BaseDelegates.cs.meta">
+      <Link>Vexe\Runtime\Types\Delegates\BaseDelegates.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Types\Delegates\DelegateSettings.cs.meta">
+      <Link>Vexe\Runtime\Types\Delegates\DelegateSettings.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Types\Delegates\uAction.cs.meta">
+      <Link>Vexe\Runtime\Types\Delegates\uAction.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Types\Delegates\uDelegate.cs.meta">
+      <Link>Vexe\Runtime\Types\Delegates\uDelegate.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Types\Delegates\uFunc.cs.meta">
+      <Link>Vexe\Runtime\Types\Delegates\uFunc.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Types\Others.meta">
+      <Link>Vexe\Runtime\Types\Others.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Types\Others\BetterPrefs.cs.meta">
+      <Link>Vexe\Runtime\Types\Others\BetterPrefs.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Types\Others\Exceptions.cs.meta">
+      <Link>Vexe\Runtime\Types\Others\Exceptions.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Types\Others\KVPList.cs.meta">
+      <Link>Vexe\Runtime\Types\Others\KVPList.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Types\Others\RuntimeMember.cs.meta">
+      <Link>Vexe\Runtime\Types\Others\RuntimeMember.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Types\Others\SerializableDictionary.cs.meta">
+      <Link>Vexe\Runtime\Types\Others\SerializableDictionary.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Types\Others\SerializableType.cs.meta">
+      <Link>Vexe\Runtime\Types\Others\SerializableType.cs.meta</Link>
+    </None>
+    <None Include="..\VFWSources\Assets\Plugins\Vexe\Runtime\Types\Others\Tuple.cs.meta">
+      <Link>Vexe\Runtime\Types\Others\Tuple.cs.meta</Link>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

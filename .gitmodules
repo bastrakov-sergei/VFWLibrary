@@ -1,0 +1,3 @@
+[submodule "VFWSources"]
+	path = VFWSources
+	url = https://github.com/sergey-bastrakov/VFWSources
